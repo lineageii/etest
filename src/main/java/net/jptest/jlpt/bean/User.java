@@ -26,6 +26,8 @@ public class User {
 	private String ksXb;
 	/** 考生ID */
 	private String ksid;
+	/** 报考省 */
+	private String province;
 	
 	public String getKsIDNO() {
 		return ksIDNO;
@@ -130,4 +132,22 @@ public class User {
 		this.ksid = ksid;
 	}
 	
+	public String getProvince() {
+		return province;
+	}
+	public void setProvince(String province) {
+		this.province = province;
+	}
+	@Override
+	public String toString() {
+		return "User [ksIDNO=" + ksIDNO + ", ksPwd=" + ksPwd + ", payed="
+				+ payed + ", ksCsrq=" + ksCsrq + ", bkjb=" + bkjb + ", ksXing="
+				+ ksXing + ", ksMing=" + ksMing + ", bkkd=" + bkkd
+				+ ", ksImgSrc=" + ksImgSrc + ", ksLoginFlag=" + ksLoginFlag
+				+ ", ksPXing=" + ksPXing + ", ksPMing=" + ksPMing + ", zkz="
+				+ zkz + ", ksIdType=" + ksIdType + ", bkkdmc=" + bkkdmc
+				+ ", ksXb=" + ksXb + ", ksid=" + ksid + ", province="
+				+ province + "]";
+	}
+
 }
