@@ -206,7 +206,68 @@ public class FlowService {
 		return parseAddressInfo(addressInfo.getText());
 	}
 	
-	
-	
+//	/**
+//	 * 预订考场
+//	 * 
+//	 * @param bkkd
+//	 *            报考考点
+//	 * @return boolean 是否预订成功
+//	 * @throws AppException
+//	 * @throws MalformedURLException
+//	 * @throws IOException
+//	 * @throws SAXException
+//	 * @throws JSONException
+//	 */
+//	public boolean book(String bkkd) throws Exception {
+//
+//		wc.setHeaderField("requesttype", "ajax");
+//		if (user.isPayed()) {
+//			this.chkImgCode = getImgCode("status");
+//			wc.putCookie("step", "status");
+//			wc.putCookie("ksIdType", this.idType);
+//			wc.putCookie("bkkdmc", this.bkkdmc);
+//			wc.putCookie("payed", "true");
+//			wc.putCookie("bkjb", this.level);
+//			wc.putCookie("bkkd", this.bkkd);
+//			wc.putCookie("isChangeKD", "1");
+//		} else {
+//			this.chkImgCode = getImgCode("selectLevel");
+//			wc.putCookie("step", "chooseaddr");
+//
+//		}
+//
+//		wc.putCookie("ksIdNo", uid);
+//		wc.putCookie("sFlag", uid);
+//		wc.putCookie("remains", "1");
+//		wc.putCookie("ksid", String.valueOf(ksid));
+//		wc.putCookie("ksLoginFlag", ksLoginFlag);
+//		wc.putCookie("chkImgSrc", this.chkImgSrc);
+//		PostMethodWebRequest loginRequest;
+//		if (this.payed) {
+//			loginRequest = new PostMethodWebRequest(URL.CHANGE_BOOK);
+//
+//		} else {
+//			loginRequest = new PostMethodWebRequest(URL.BOOK);
+//		}
+//		// bkjb=1&bkkd=17&ksid=272230&ksIdNo=420602198304131019&chkImgFlag=420602198304131019&ksLoginFlag=BnVS90PFagO24M1ySM6b3E8ZDk0STmut&chkImgCode=vavg
+//		loginRequest.setParameter("bkjb", this.level);
+//		loginRequest.setParameter("bkkd", bkkd);
+//		loginRequest.setParameter("ksid", String.valueOf(ksid));
+//		loginRequest.setParameter("ksIdNo", uid);
+//		loginRequest.setParameter("chkImgFlag", uid);
+//		loginRequest.setParameter("ksLoginFlag", ksLoginFlag);
+//		loginRequest.setParameter("chkImgCode", chkImgCode);
+//		WebResponse response = wc.getResource(loginRequest);
+//
+//		// 用JONS解析结果
+//		Result result = parseResult(response.getText());
+//		if ("1".equals(result.getRetVal())) {
+//			return true;
+//		} else {
+//			throw new AppException(ErrorCode.valueOf("ERROR_" + result.getErrorNum()).toString());
+//		}
+//
+//	}
+//	
 
 }
